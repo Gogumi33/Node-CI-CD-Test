@@ -50,7 +50,6 @@ app.use("/api/my", require("./routers/User/profileRoute"));
 app.use("/api/post", require("./routers/Post/postRoute"));
 
 
-
 // 서버 시작 확인 
 app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);
