@@ -4,8 +4,6 @@ const express = require("express");
 const path = require("path");
 const { sequelize } = require("./config/db");
 const cors = require('cors');
-// const cookieParser = require('cookie-parser');
-
 
 // 모델 초기화 및 관계 설정
 const User = require('./models/User');
@@ -34,7 +32,6 @@ app.use(cors({
     credentials: true // 쿠키 포함 요청허용
 }));
 app.use(express.json()); // 🌟🌟🌟 오류났던 이유!!! 이게 cors설정 밑에 바로 와있어야 한다
-// app.use(cookieParser());
 
 // DB 연결작업
 sequelize.sync({ force: false })
